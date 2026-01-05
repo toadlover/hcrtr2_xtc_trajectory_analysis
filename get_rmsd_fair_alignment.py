@@ -20,16 +20,16 @@ INACTIVE_PDB = "4s0v_aligned.pdb"
 #TM_RESIDUES_INACTIVE = list(range(55, 81)) + list(range(90, 117)) + list(range(124, 157)) + list(range(166, 188)) + list(range(219, 249)) + list(range(294, 328)) + list(range(339, 367))
 
 # Trimmed TM ranges (focus on core TM residues)
-#TM1 = range(57, 78)
-#TM2 = range(92, 115)
-#TM3 = range(126, 155)
-#TM4 = range(168, 186)
-#TM5 = range(222, 246)
-#TM6 = range(296, 324)
-#TM7 = range(341, 364)
+TM1 = range(59, 76)
+TM2 = range(94, 113)
+TM3 = range(128, 153)
+TM4 = range(170, 184)
+TM5 = range(224, 244)
+TM6 = range(298, 322)
+TM7 = range(343, 362)
 
-#TM_RESIDUES_ACTIVE   = list(TM1) + list(TM2) + list(TM3) + list(TM4) + list(TM5) + list(TM6) + list(TM7)
-TM_RESIDUES_ACTIVE = [61,103,106,107,108,109,110,111,112,113,114,115,120,122,127,129,130,131,132,133,134,135,136,138,142,184,187,191,210,211,212,223,224,227,228,231,232,313,317,320,321,323,324,325,328,346,347,349,350,351,353,354]
+TM_RESIDUES_ACTIVE   = list(TM1) + list(TM2) + list(TM3) + list(TM4) + list(TM5) + list(TM6) + list(TM7)
+#TM_RESIDUES_ACTIVE = [61,103,106,107,108,109,110,111,112,113,114,115,120,122,127,129,130,131,132,133,134,135,136,138,142,184,187,191,210,211,212,223,224,227,228,231,232,313,317,320,321,323,324,325,328,346,347,349,350,351,353,354]
 TM_RESIDUES_INACTIVE = TM_RESIDUES_ACTIVE
 
 
