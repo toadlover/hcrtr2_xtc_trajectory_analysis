@@ -16,8 +16,21 @@ INACTIVE_PDB = "4s0v_aligned.pdb"
 
 # TM helix residue ranges (example: list of residue numbers in reference PDB)
 # Replace with your receptor's TM residues
-TM_RESIDUES_ACTIVE   = list(range(55, 81)) + list(range(90, 117)) + list(range(124, 157)) + list(range(166, 188)) + list(range(219, 249)) + list(range(294, 328)) + list(range(339, 367))
-TM_RESIDUES_INACTIVE = list(range(55, 81)) + list(range(90, 117)) + list(range(124, 157)) + list(range(166, 188)) + list(range(219, 249)) + list(range(294, 328)) + list(range(339, 367))
+#TM_RESIDUES_ACTIVE   = list(range(55, 81)) + list(range(90, 117)) + list(range(124, 157)) + list(range(166, 188)) + list(range(219, 249)) + list(range(294, 328)) + list(range(339, 367))
+#TM_RESIDUES_INACTIVE = list(range(55, 81)) + list(range(90, 117)) + list(range(124, 157)) + list(range(166, 188)) + list(range(219, 249)) + list(range(294, 328)) + list(range(339, 367))
+
+# Trimmed TM ranges (focus on core TM residues)
+TM1 = range(57, 78)
+TM2 = range(92, 115)
+TM3 = range(126, 155)
+TM4 = range(168, 186)
+TM5 = range(222, 246)
+TM6 = range(296, 324)
+TM7 = range(341, 364)
+
+TM_RESIDUES_ACTIVE   = list(TM1) + list(TM2) + list(TM3) + list(TM4) + list(TM5) + list(TM6) + list(TM7)
+TM_RESIDUES_INACTIVE = TM_RESIDUES_ACTIVE
+
 
 ATOM_NAME = "CA"  # robust for TM mapping
 
