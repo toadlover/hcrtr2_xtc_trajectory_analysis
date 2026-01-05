@@ -125,3 +125,6 @@ for i, (ra, ri) in enumerate(zip(rmsd_active, rmsd_inactive)):
     print(f"{i:5d}   {ra:12.4f}   {ri:14.4f}   {delta:10.4f}")
 
 print("\nDone.")
+
+print("Number of TM CA atoms (active ref):", len(tm_active_idx))
+print("Number of TM CA atoms (inactive ref):", len(tm_inactive_idx))
