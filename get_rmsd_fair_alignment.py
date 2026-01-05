@@ -141,3 +141,20 @@ print("\nDone.")
 
 print("Number of TM CA atoms (active ref):", len(tm_active_idx))
 print("Number of TM CA atoms (inactive ref):", len(tm_inactive_idx))
+
+# =========================
+# Save last frame for inspection
+# =========================
+last_frame_active   = traj_aligned_active[-1]
+last_frame_inactive = traj_aligned_inactive[-1]
+
+# Save PDBs of the last frame
+last_frame_active.save_pdb("last_frame_aligned_to_active.pdb")
+last_frame_inactive.save_pdb("last_frame_aligned_to_inactive.pdb")
+
+print("\nSaved last frame for visual inspection:")
+print("  Aligned to active state  -> last_frame_aligned_to_active.pdb")
+print("  Aligned to inactive state -> last_frame_aligned_to_inactive.pdb")
+
+print("\nResidue numbers for TM CA atoms (active):", [res.resSeq for res in active_ref.topology.residues if res.resSeq in TM_RESIDUES_ACTIVE and res.is_protein])
+print("Residue numbers for TM CA atoms (inactive):", [res.resSeq for res in inactive_ref.topology.residues if res.resSeq in TM_RESIDUES_INACTIVE and res.is_protein])
