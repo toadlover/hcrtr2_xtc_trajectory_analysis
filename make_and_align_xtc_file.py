@@ -12,8 +12,8 @@ TOPOLOGY_FILE = "samples_sidechain_rec.pdb"          # must match XTC atom order
 REFERENCE_PDB = "af_aligned.pdb" # reference already aligned as desired
 
 OUTPUT_DIR = "aligned_frames"
-WRITE_PDBS = False      # True = write individual PDBs
-WRITE_MULTI_PDB = True  # True = write one multi-model PDB
+WRITE_PDBS = True      # True = write individual PDBs
+WRITE_MULTI_PDB = False  # True = write one multi-model PDB
 
 # Atom selection for alignment
 ALIGN_SELECTION = "protein and backbone"
