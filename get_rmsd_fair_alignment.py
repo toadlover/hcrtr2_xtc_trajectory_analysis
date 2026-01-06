@@ -95,7 +95,7 @@ def pymol_align_traj_to_ref(traj, ref_pdb, tm_residues):
             aligned_coords[i] = aligned_frame.xyz[0]
             cmd.delete("frame")
             cmd.delete("aligned_frame")
-            os.system("rm -drf tmp_frame_" + str(i) + ".pdb")
+            #os.system("rm -drf tmp_frame_" + str(i) + ".pdb")
     return traj.__class__(xyz=aligned_coords, topology=traj.topology)
 
 # Align trajectory to active and inactive references
