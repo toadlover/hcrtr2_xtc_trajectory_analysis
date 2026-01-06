@@ -3,6 +3,7 @@ import mdtraj as md
 import numpy as np
 from Bio.Data import IUPACData
 import pymol2
+import os
 
 # =========================
 # USER INPUTS
