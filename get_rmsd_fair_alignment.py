@@ -25,7 +25,7 @@ TM7 = range(341, 364)
 TM_RESIDUES = list(TM1) + list(TM2) + list(TM3) + list(TM4) + list(TM5) + list(TM6) + list(TM7)
 
 # Binding pocket residues for RMSD (example, replace with your own list)
-BINDING_POCKET = [102, 105, 110, 185, 246, 250, 293, 297, 339]
+BINDING_POCKET = [61,103,106,107,108,109,110,111,112,113,114,115,120,122,127,129,130,131,132,133,134,135,136,138,142,184,187,191,210,211,212,223,224,227,228,231,232,313,317,320,321,323,324,325,328,346,347,349,350,351,353,354]
 
 ATOM_NAME = "CA"
 
@@ -76,6 +76,11 @@ def pymol_align_traj_to_ref(traj, ref_pdb, tm_residues):
         cmd.load(ref_pdb, "ref")
         # Loop over frames
         for i, frame in enumerate(traj):
+
+            #temporary quick buffer
+            if i % 100 != 0:
+                continue
+
             tmp_pdb = f"tmp_frame_{i}.pdb"
             frame.save_pdb(tmp_pdb)
             cmd.load(tmp_pdb, "frame")
@@ -89,6 +94,7 @@ def pymol_align_traj_to_ref(traj, ref_pdb, tm_residues):
             aligned_coords[i] = aligned_frame.xyz[0]
             cmd.delete("frame")
             cmd.delete("aligned_frame")
+            os.system("rm -drf tmp_frame_" + str(i) + ".pdb")
     return traj.__class__(xyz=aligned_coords, topology=traj.topology)
 
 # Align trajectory to active and inactive references
