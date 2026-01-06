@@ -79,8 +79,8 @@ def pymol_align_traj_to_ref(traj, ref_pdb, tm_residues):
         for i, frame in enumerate(traj):
 
             #temporary quick buffer
-            if i % 100 != 0:
-                continue
+            #if i % 100 != 0:
+            #    continue
 
             tmp_pdb = f"tmp_frame_{i}.pdb"
             frame.save_pdb(tmp_pdb)
